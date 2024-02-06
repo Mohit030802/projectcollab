@@ -3,6 +3,7 @@ import connectDB from './db/db.js'
 import projectContriRouter from './Router/projectContri.js'
 import userRouter from './Router/userRouter.js'
 import cors from 'cors'
+import porjectIdeadRouter from './Router/projectIdea.js'
 
 // DB Connection 
 connectDB()
@@ -15,6 +16,7 @@ app.use(cors())
 // Routers
 app.use('/user',userRouter)
 app.use('/projectContri',projectContriRouter)
+app.use('/ideas',porjectIdeadRouter)
 
 
 

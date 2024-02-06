@@ -14,7 +14,7 @@ const projectIdeaSchema=new mongoose.Schema({
         type:String,
         required:true,
     },
-    Category:{
+    category:{
         type:String,
         required:true,
     },
@@ -26,16 +26,20 @@ const projectIdeaSchema=new mongoose.Schema({
         required:true,
     },
     duration:{
+        type:String,
+        required:true,
+    },
+    domain:{
+        type:String,
+        required:true,
+    },
+    techStack:{
+        type:String,
+        required:true,
+    },
+    createdOn:{
         type:Date,
-        required:true,
-    },
-    Domain:{
-        type:String,
-        required:true,
-    },
-    TechStack:{
-        type:String,
-        required:true,
+        default:Date.now
     }
 })
 
