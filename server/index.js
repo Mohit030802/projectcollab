@@ -4,15 +4,17 @@ import projectContriRouter from './Router/projectContri.js'
 import userRouter from './Router/userRouter.js'
 import cors from 'cors'
 import porjectIdeadRouter from './Router/projectIdea.js'
-
+import morgan from 'morgan'
 // DB Connection 
 connectDB()
 const app=express()
 const PORT=3000
 // Middlewares
 app.use(express.json());
+app.use(morgan('dev'))
 // cors
 app.use(cors())
+
 // Routers
 app.use('/user',userRouter)
 app.use('/projectContri',projectContriRouter)

@@ -1,8 +1,11 @@
 import express from 'express';
 const projectContriRouter=express.Router();
-import { postProject,getProject } from "../Controller/projectContriController.js";
+import { postProject,getProject,myProjects } from "../Controller/projectContriController.js";
+import authmiddleware from '../auth/auth.js';
 
-projectContriRouter.post('/postProject',postProject);
 projectContriRouter.get('/getProjects',getProject);
+projectContriRouter.post('/postProject',authmiddleware,postProject);
+projectContriRouter.get('/myProjects',authmiddleware,myProjects);
+
 
 export default projectContriRouter;

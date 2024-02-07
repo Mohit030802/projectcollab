@@ -19,6 +19,7 @@ const userSchema=new mongoose.Schema({
     githubUsername:{
         type:String,
         required:true,
+        unique:true,
     },
     bio:{
         type:String,
