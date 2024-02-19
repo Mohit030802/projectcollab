@@ -1,21 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../assets/logo.svg'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const res = await axios.post('http://localhost:3000/user/login', { email, password })
-            console.log(res)
-
-        } catch (error) {
-            console.log(error)
-        }
-    };
+    const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [isLoggedin, setIsLoggedin] = useState(false)
+  const navigate = useNavigate()
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      const res = await axios.post('http://localhost:3000/user/login', { email, password })
+      setIsLoggedin(true)
+      localStorage.setItem('token', res.data.token) 
+      console.log(res.data.token)
+     
+        navigate('/')
+      
+    } catch (error) {
+      console.log(error)
+    }
+  }
+   
 
     return (
         <div className='bg-registerbg flex flex-col justify-center items-center h-screen bg-cover bg-no-repeat text-white'>
@@ -25,7 +32,7 @@ const Login = () => {
                         {/* <img src={logo} width="100%" height="100%"  alt="" className='h-[20vh] w-[20vw] ' /> */}
                         <h2 className="text-3xl font-bold mb-4 text-white font-protest">Welcome back</h2>
                         <Link to='/register'>
-                            <p className="text-white mb-4">Start your website in seconds. Don’t have an account? <a href="#" className="text-blue-500">Sign up</a>.</p>
+                            <p className="text-white mb-4">Start your website in seconds. Don’t have an account? <span className="text-blue-500">Sign up</span>.</p>
                         </Link>
                         <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center">
                             <label htmlFor="email" className="text-white">Email</label>
