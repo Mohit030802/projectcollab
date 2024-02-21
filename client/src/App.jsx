@@ -4,6 +4,8 @@ import './App.css'
 import Home from './Components/Home'
 import Login from './Components/Login'
 import Register from './Components/Register'
+import CollabPage from './Components/CollabPage'
+import IdeaExchange from './Components/IdeaExchange'
 
 function App() {
 
@@ -15,7 +17,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path='/register' element={<Register/>}></Route>
-      </Routes>
+        <Route path='/collab' element={<CollabPage/>}></Route>
+        <Route path='/ideas' element={<IdeaExchange/>}></Route>
+      </Routes> 
       
 
     </>

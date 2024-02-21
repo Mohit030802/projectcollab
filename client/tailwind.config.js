@@ -12,6 +12,7 @@ export default {
         'navbg': 'url(./assets/navbg.svg)',
         'mainbg': 'url(./assets/blob.svg)',
         'registerbg': 'url(./assets/Hexagon.svg)',
+        'light':'url(./assets/light.svg)',
       },
       fontFamily: {
         protest: ["Protest Revolution","sans-serif"],

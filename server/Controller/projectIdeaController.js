@@ -2,6 +2,7 @@ const JWT_SECRET = "projectCollabApp";
 import jwt from "jsonwebtoken";
 import projectIdea from "../Modal/projectIdeadModal.js";
 import user from "../Modal/userModal.js";
+import moment from 'moment';
 
 const showIdead = async (req, res) => {
   try {
@@ -17,6 +18,7 @@ const showIdead = async (req, res) => {
 
 const addIdead = async (req, res) => {
   try {
+    let currentDate = moment().format('MMMM Do YYYY, h:mm:ss a');
     const token = req.headers.authorization;
     if (!token) {
       res.status(401).json({ message: "Login to get access" });
@@ -26,9 +28,11 @@ const addIdead = async (req, res) => {
     if (!verified) {
       res.status(401).json({ message: "Token not verified" });
     }
+
     const ownerEmail = checkuser[0].email;
     const ownerName = checkuser[0].username;
     const ownerGithubUsername = checkuser[0].githubUsername;
+    const createdOn = currentDate;
     const { title, description, category, duration, domain, techStack } =
       req.body;
     const newIdea = new projectIdea({
@@ -41,6 +45,7 @@ const addIdead = async (req, res) => {
       duration,
       domain,
       techStack,
+      createdOn,
     });
     await newIdea.save();
     res.status(201).json({ message: "Idea added successfully" });
