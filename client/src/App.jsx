@@ -9,6 +9,7 @@ import IdeaExchange from './Components/IdeaExchange'
 import ProjectForm from './Components/ProjectForm'
 
 import IdeaForm from './Components/IdeaForm'
+import Profile from './Components/Profile'
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
         <Route path='/collabForm' element={<ProjectForm/>}></Route>
         <Route path='/ideaForm' element={<IdeaForm/>}></Route>
         <Route path='*' element={<Home/>}></Route>
-        
+        <Route path='/profile' element={<Profile/>}></Route>
       </Routes> 
       
 

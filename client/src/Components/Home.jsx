@@ -36,7 +36,7 @@ const Home = () => {
                         ProjectCollab
                     </div>
                     <div className='outline outline-1 outline-white hover:drop-shadow-2xl hover:drop-shadow-white cursor-pointer rounded-full h-[50%]' >
-                        <div><Link to='/login'>{user ? `${user[0].username}` :<PersonIcon />}</Link></div>
+                        <div><Link to='/profile'>{user ? `${user[0].username}` :<PersonIcon />}</Link></div>
                     </div>
                 </div>
                 <div className='flex flex-col h-screen justify-center items-center'>

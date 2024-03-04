@@ -5,12 +5,14 @@ import userRouter from './Router/userRouter.js'
 import cors from 'cors'
 import porjectIdeadRouter from './Router/projectIdea.js'
 import morgan from 'morgan'
+import bodyParser from 'body-parser'
 // DB Connection 
 connectDB()
 const app=express()
 const PORT=3000
 // Middlewares
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'))
 // cors
 app.use(cors())
