@@ -13,7 +13,7 @@ const MainComp = () => {
 
           <p className='text-gray-400 font-lora mb-8'> So, Join our project collaboration platform today and be a part of a dynamic community where ideas flourish, skills are honed, and projects come to life through the power of collaboration!</p>
           <Link to='/collab'>
-          <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-full uppercase tracking-wider transition duration-300 ease-in-out'>Get Started</button>
+            <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-full uppercase tracking-wider transition duration-300 ease-in-out'>Get Started</button>
           </Link>
         </div>
 
@@ -24,8 +24,8 @@ const MainComp = () => {
           </p>
           <p className='text-gray-400 font-lora mb-8'> So, Join the Project Ideas Exchange today and embark on a journey of creativity, collaboration, and innovation. Together, let's turn ideas into reality and make a positive impact on the world!</p>
           <Link to='/ideas'>
-          
-          <button className='bg-transparent hover:bg-purple-500 text-purple-700 font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded-full uppercase tracking-wider transition duration-300 ease-in-out'>Get Started</button>
+
+            <button className='bg-transparent hover:bg-purple-500 text-purple-700 font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded-full uppercase tracking-wider transition duration-300 ease-in-out'>Get Started</button>
           </Link>
         </div>
       </div>

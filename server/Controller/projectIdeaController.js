@@ -18,7 +18,7 @@ const showIdead = async (req, res) => {
 
 const addIdead = async (req, res) => {
   try {
-    let currentDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+    // let currentDate = moment().format('MMMM Do YYYY, h:mm:ss a');
     const token = req.headers.authorization;
     if (!token) {
       res.status(401).json({ message: "Login to get access" });
@@ -32,7 +32,7 @@ const addIdead = async (req, res) => {
     const ownerEmail = checkuser[0].email;
     const ownerName = checkuser[0].username;
     const ownerGithubUsername = checkuser[0].githubUsername;
-    const createdOn = currentDate;
+    // const createdOn = currentDate;
     const { title, description, category, duration, domain, techStack } =
       req.body;
     const newIdea = new projectIdea({
@@ -45,8 +45,9 @@ const addIdead = async (req, res) => {
       duration,
       domain,
       techStack,
-      createdOn,
+      // createdOn,
     });
+    
     await newIdea.save();
     res.status(201).json({ message: "Idea added successfully" });
   } catch (error) {
