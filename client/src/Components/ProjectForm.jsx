@@ -31,7 +31,7 @@ const ProjectForm = () => {
     return (
         <>
             <div className=" text-white">
-                <div className="flex bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] mx-auto">
+                <div className="flex mx-auto">
                     <div className="w-full lg:w-8/12 px-4 mx-auto mt-6">
                         <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-registerbg border-0">
                             <div className="rounded-t  mb-0 px-6 py-6">

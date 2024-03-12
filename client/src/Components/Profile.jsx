@@ -1,14 +1,20 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
   const [user, setUser] = useState([0]);
   const [myProjects, setMyProjects] = useState([]);
   const[myIdeas,setMyIdeas]=useState([])
+  const navigate=useNavigate()
 
   const token = localStorage.getItem('token')
   useEffect(() => {
+    if(!token){
+      navigate('/login')
+    }
     const fetchUser = async () => {
+
       try {
         if (token) {
           axios.defaults.headers.common['authorization'] = token;
@@ -18,6 +24,7 @@ const Profile = () => {
 
 
         }
+        
       } catch (error) {
         console.log(error)
       }
@@ -29,6 +36,7 @@ const Profile = () => {
           const res = await axios.get('http://localhost:3000/projectContri/myProjects')
           setMyProjects(res.data.projects)
         }
+        
       } catch (error) {
         console.log(error)
       }
@@ -40,7 +48,7 @@ const Profile = () => {
           const res=await axios.get('http://localhost:3000/ideas/myIdeas')
           setMyIdeas(res.data.ideas)
         }
-
+        
       } catch (error) {
         console.log(error)
       }
@@ -60,7 +68,7 @@ const Profile = () => {
   console.log(myIdeas)
   return (
     <>
-      <div className='bg-mainbg  h-full bg-cover'>
+      <div className='  h-full bg-cover'>
 
         <div class="container  mx-auto flex justify-between p-10">
           <div class="user-info bg-gray-800 text-white p-8 rounded-lg w-1/3">

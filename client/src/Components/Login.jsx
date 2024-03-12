@@ -25,7 +25,7 @@ const Login = () => {
    
 
     return (
-        <div className='bg-registerbg flex flex-col justify-center items-center h-screen bg-cover bg-no-repeat text-white'>
+        <div className=' flex flex-col justify-center items-center h-screen bg-cover bg-no-repeat text-white'>
             <div className="grid grid-cols-2">
                 <div className='bg-[#152f43] p-6 rounded-xl ml-4'>
                     <div className=''>

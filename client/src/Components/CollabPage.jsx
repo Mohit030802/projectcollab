@@ -21,7 +21,7 @@ const CollabPage = () => {
 
     return (
         <>
-            <div className='bg-light flex flex-col justify-between h-full bg-no-repeat bg-cover text-white'>
+            <div className=' flex flex-col justify-between h-full bg-no-repeat bg-cover text-black'>
                 {projects.map((project, index) => (
                     <div key={project._id} className='flex flex-col justify-between p-4 m-4 border border-gray-400 rounded'>
 
