@@ -33,7 +33,7 @@ const Home = () => {
                         <DensityMediumIcon />
                     </div>
                     <div className='flex justify-center flex-grow font-protest text-6xl text-black'>
-                        Project <span className='text-[#d0913f]'>Collab</span> 
+                        Project <span className='text-[#d0913f]'>Collab</span>
                     </div>
                     <div className='bg-[#F7B762] text-white p-2 flex justify-center items-center border-2 border-[#f7ad4c] outline outline-4 outline-white hover:drop-shadow-2xl hover:drop-shadow-white cursor-pointer rounded-full h-[50%]' >
                         <div><Link to='/profile'>{user ? `${user[0].username}` : <PersonIcon />}</Link></div>
@@ -62,6 +62,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <hr class="w-11/12 h-px mx-auto my-4 bg-[#F7B762] border-0 rounded  "></hr>
             <MainComp />
         </>
     );
