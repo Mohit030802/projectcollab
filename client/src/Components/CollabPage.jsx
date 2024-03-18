@@ -25,125 +25,7 @@ const CollabPage = () => {
 
     return (
         <>
-            {/* <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
-                <a class="text-3xl font-bold leading-none" href="#">
-                    <img src={logo} width={50} height={50} alt="" />
-                </a>
-                <div class="lg:hidden">
-                    <button class="navbar-burger flex items-center text-blue-600 p-3">
-                        <svg
-                            class="block h-4 w-4 fill-current"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <title>Mobile menu</title>
-                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-                        </svg>
-                    </button>
-                </div>
-                <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2  lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-                    <li>
-                        <a class="text-sm text-gray-400 hover:text-gray-500" href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li class="text-gray-300">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            stroke="currentColor"
-                            class="w-4 h-4 current-fill"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                            />
-                        </svg>
-                    </li>
-                    <li>
-                        <a class="text-sm text-gray-400 " href="#">
-                            About Us
-                        </a>
-                    </li>
-                    <li class="text-gray-300">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            stroke="currentColor"
-                            class="w-4 h-4 current-fill"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                            />
-                        </svg>
-                    </li>
-                    <li>
-                        <a class="text-sm text-gray-400 hover:text-gray-500" href="#">
-                            Ideas
-                        </a>
-                    </li>
-                    <li class="text-gray-300">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            stroke="currentColor"
-                            class="w-4 h-4 current-fill"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                            />
-                        </svg>
-                    </li>
-                    <li>
-                        <a
-                            class="text-sm text-[#d0913f] font-bold hover:text-gray-500"
-                            href="#"
-                        >
-                            Projects
-                        </a>
-                    </li>
-                    <li class="text-gray-300">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            stroke="currentColor"
-                            class="w-4 h-4 current-fill"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                            />
-                        </svg>
-                    </li>
-                </ul>
-                <a
-                    class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-[#d0913f] hover:text-white text-sm text-gray-900 font-bold  rounded-xl transition duration-200"
-                    href="#"
-                >
-                    Sign In
-                </a>
-                <a
-                    class="hidden lg:inline-block py-2 px-6 bg-[#d0913f] hover:bg-[#e5ae65] text-sm text-white font-bold rounded-xl transition duration-200"
-                    href="#"
-                >
-                    Sign up
-                </a>
-            </nav> */}
-            <Navbar/>
+            <Navbar />
             <header>
                 <div className="relative isolate px-6 pt-14 lg:px-8">
                     <div
@@ -158,34 +40,53 @@ const CollabPage = () => {
                             }}
                         />
                     </div>
-                    <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-                        <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                                Announcing our next round of funding.{' '}
-                                <a href="#" className="font-semibold text-indigo-600">
-                                    <span className="absolute inset-0" aria-hidden="true" />
-                                    Read more <span aria-hidden="true">&rarr;</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="text-center">
-                            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                                Data to enrich your online business
-                            </h1>
-                            <p className="mt-6 text-lg leading-8 text-gray-600">
-                                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                                fugiat veniam occaecat fugiat aliqua.
-                            </p>
-                            <div className="mt-10 flex items-center justify-center gap-x-6">
-                                <a
-                                    href="#"
-                                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                >
-                                    Get started
-                                </a>
-                                <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                                    Learn more <span aria-hidden="true">→</span>
-                                </a>
+                    <div class="relative overflow-hidden">
+                        <div class="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
+                            <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+                                <div class="sm:max-w-lg">
+                                    <h1 class="font text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Project Collab</h1>
+                                    <p class="mt-4 text-md text-gray-500">Project collaboration is a powerful tool that enhances productivity and communication within a team. It allows for real-time cooperation, ensuring that everyone is on the same page and working towards the same goals. This not only speeds up the project completion time but also improves the quality of the work. With the ability to share knowledge, distribute workload, and make informed decisions quickly, project collaboration ultimately leads to more successful project outcomes. Furthermore, it supports remote work, making it an essential tool in today's global and digital work environment.</p>
+                                </div>
+                                <div>
+                                    <div class="mt-10">
+
+                                        <div aria-hidden="true" class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
+                                            <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                                                <div class="flex items-center space-x-6 lg:space-x-8">
+                                                    <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                                                        <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                                                            <img src="https://placekitten.com/g/200/300" class="h-full w-full object-cover object-center" />
+                                                        </div>
+                                                        <div class="h-64 w-44 overflow-hidden rounded-lg">
+                                                            <img src="https://placekeanu.com/200/300" alt="" class="h-full w-full object-cover object-center" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                                                        <div class="h-64 w-44 overflow-hidden rounded-lg">
+                                                            <img src="https://placekeanu.com/684/350/" alt="" class="h-full w-full object-cover object-center" />
+                                                        </div>
+                                                        <div class="h-64 w-44 overflow-hidden rounded-lg">
+                                                            <img src="https://placekeanu.com/250/350/y" alt="" class="h-full w-full object-cover object-center" />
+                                                        </div>
+                                                        <div class="h-64 w-44 overflow-hidden rounded-lg">
+                                                            <img src="https://placekitten.com/g/200/300" alt="" class="h-full w-full object-cover object-center" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                                                        <div class="h-64 w-44 overflow-hidden rounded-lg">
+                                                            <img src="https://placekeanu.com/684/350/y" alt="" class="h-full w-full object-cover object-center" />
+                                                        </div>
+                                                        <div class="h-64 w-44 overflow-hidden rounded-lg">
+                                                            <img src="https://placebear.com/684/350" alt="" class="h-full w-full object-cover object-center" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a href="#" class="inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-center font-medium text-white hover:bg-indigo-700">Svelte Signals</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
